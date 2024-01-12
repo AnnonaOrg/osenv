@@ -1,0 +1,11 @@
+#!/bin/bash
+
+VERSION=0.0.2
+APPNAME=osenv
+
+git add .
+git commit -m "debug"
+#git branch -M main
+git push
+git tag "v${VERSION}"
+git push --tags
