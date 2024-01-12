@@ -9,11 +9,22 @@ func GetAppTelegramBotToken() string {
 	return os.Getenv("APP_TELEGRAM_BOT_TOKEN")
 }
 
-// apiIdRaw = os.Getenv("API_ID")
-// apiHash  = os.Getenv("API_HASH")
+// app api id
 func GetAppTelegramApiID() string {
 	return os.Getenv("APP_TELEGRAM_API_ID")
 }
+
+// app api hash
 func GetAppTelegramApiHash() string {
 	return os.Getenv("APP_TELEGRAM_API_HASH")
+}
+
+// app user phone number
+func GetAppTelegramUserPhoneNumber() string {
+	return os.Getenv("APP_TELEGRAM_USER_PHONE_NUMBER")
+}
+
+// app user id
+func GetAppTelegramUserID() string {
+	return os.Getenv("APP_TELEGRAM_USER_ID")
 }
