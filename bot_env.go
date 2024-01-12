@@ -12,7 +12,7 @@ func GetBotManagerID() string {
 }
 func IsBotManagerID(id int64) bool {
 	return strings.EqualFold(
-		GetManagerID(),
+		GetBotManagerID(),
 		fmt.Sprintf("%d", id),
 	)
 }
