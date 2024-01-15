@@ -38,3 +38,12 @@ func GetRel(basepath, targpath string) string {
 	}
 	return s
 }
+
+// 判断文件是否存在
+func PathExist(pathStr string) bool {
+	_, err := os.Stat(pathStr)
+	if err != nil && os.IsNotExist(err) {
+		return false
+	}
+	return true
+}
