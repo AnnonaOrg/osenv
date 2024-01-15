@@ -16,6 +16,12 @@ func IsBotManagerID(id int64) bool {
 		fmt.Sprintf("%d", id),
 	)
 }
+func IsBotManagerIDStr(idStr string) bool {
+	return strings.EqualFold(
+		GetBotManagerID(),
+		idStr,
+	)
+}
 
 // Bot token
 func GetBotTelegramToken() string {
