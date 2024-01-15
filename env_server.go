@@ -10,6 +10,12 @@ func GetServerPort() string {
 	return os.Getenv("SERVER_PORT")
 }
 
+// server url http://127.0.0.1:8080
+// SERVER_URL
+func GetServerUrl() string {
+	return os.Getenv("SERVER_URL")
+}
+
 // server db redis address
 // SERVER_DB_REDIS_ADDRESS 127.0.0.1:6379
 func GetServerDbRedisAddress() string {
