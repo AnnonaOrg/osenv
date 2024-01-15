@@ -1,4 +1,4 @@
-package env
+package osenv
 
 import (
 	"fmt"
@@ -28,7 +28,7 @@ func GetAbsPath(tmpName, defaultName string) string {
 	return filepath.Join(Getwd(), name)
 }
 
-//https://www.cnblogs.com/malukang/p/12907945.html
+// https://www.cnblogs.com/malukang/p/12907945.html
 // GetRel(uploadDir,uploadFilePath)
 // 获取相对路径
 func GetRel(basepath, targpath string) string {
