@@ -9,3 +9,9 @@ import (
 func GetCoreApiToken() string {
 	return os.Getenv("CORE_API_TOKEN")
 }
+
+// #core api url https://server.domain
+// CORE_API_URL=
+func GetCoreApiUrl() string {
+	return os.Getenv("CORE_API_URL")
+}
