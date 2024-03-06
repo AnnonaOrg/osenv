@@ -2,7 +2,7 @@ all: build
 
 APP_GIT		:= AnnonaOrg/osenv
 APP          := osenv
-DOCKER_IMAGE := baicailin/osenv
+DOCKER_IMAGE := AnnonaOrg/osenv
 VERSION      := $(shell git describe --tags --abbrev=0)
 COMMIT       := $(shell git rev-parse --short HEAD)
 BUILD_DATE   := `date +%FT%T%z`
