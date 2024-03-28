@@ -69,3 +69,9 @@ func GetServerDbPassword() string {
 func GetServerDbName() string {
 	return os.Getenv("SERVER_DB_NAME")
 }
+
+// #数据库数据表前缀，形式如 数据库域名:端口号
+// SERVER_DB_TABLE_PREFIX
+func GetServerDbTablePrefix() string {
+	return os.Getenv("SERVER_DB_TABLE_PREFIX")
+}
