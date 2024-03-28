@@ -19,7 +19,7 @@ func GetJWTSecret() string {
 }
 
 func GenerateJWTSecret() string {
-	if len(jwtSecret) > 0 {
+	if len(JWTSecret) > 0 {
 		return JWTSecret
 	} else {
 		sync.Once.Do(func() {

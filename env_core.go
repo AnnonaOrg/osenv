@@ -18,6 +18,6 @@ func GetCoreApiUrl() string {
 
 // # core api 验证token (只读权限) core_api_token_readonly
 // CORE_API_TOKEN_READONLY=
-func GetCoreApiToken() string {
+func GetCoreApiTokenReadOnly() string {
 	return os.Getenv("CORE_API_TOKEN_READONLY")
 }

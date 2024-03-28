@@ -27,6 +27,6 @@ func GetServerDbRedisDB() int {
 	if vi, err := strconv.Atoi(v); err != nil {
 		return 0
 	} else {
-		vi
+		return vi
 	}
 }
