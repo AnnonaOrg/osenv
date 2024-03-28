@@ -22,12 +22,6 @@ func GetServerUrl() string {
 	return os.Getenv("SERVER_URL")
 }
 
-// server db redis address
-// SERVER_DB_REDIS_ADDRESS 127.0.0.1:6379
-func GetServerDbRedisAddress() string {
-	return os.Getenv("SERVER_DB_REDIS_ADDRESS")
-}
-
 // 数据库类型, mysql,sqlite,postgres 创建的mysql数据库数据集建议使用utf8mb4
 // SERVER_DB_TYPE
 func GetServerDbType() string {
