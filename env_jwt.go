@@ -9,6 +9,7 @@ import (
 // #JWT Secret
 // JWT_SECRET=
 var JWTSecret string
+var once sync.Once
 
 func GetJWTSecret() string {
 	item := os.Getenv("JWT_SECRET")
@@ -22,7 +23,7 @@ func GenerateJWTSecret() string {
 	if len(JWTSecret) > 0 {
 		return JWTSecret
 	} else {
-		sync.Once.Do(func() {
+		once.Do(func() {
 			JWTSecret = GenerateRandomString(10)
 		})
 		return JWTSecret
