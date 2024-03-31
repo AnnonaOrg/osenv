@@ -4,7 +4,11 @@ import (
 	"os"
 )
 
-// LogLevel
+// LogLevel panic,fatal,error,warn,warning,info,debug,trace
 func GetLogLevel() string {
-	return os.Getenv("LOG_LEVEL")
+	retText := os.Getenv("LOG_LEVEL")
+	if len(retText) > 0 {
+		return retText
+	}
+	return "info"
 }
