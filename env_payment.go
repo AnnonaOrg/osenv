@@ -103,6 +103,12 @@ func GetPaymentEasyPayUrl() string {
 	return os.Getenv("PAYMENT_EASYPAY_API_URL")
 }
 
+// #易支付 商户id
+// PAYMENT_EASYPAY_API_PID=
+func GetPaymentEasyPayPid() string {
+	return os.Getenv("PAYMENT_EASYPAY_API_PID")
+}
+
 // #易支付 验证密钥
 // PAYMENT_EASYPAY_API_KEY=
 func GetPaymentEasyPayKey() string {
