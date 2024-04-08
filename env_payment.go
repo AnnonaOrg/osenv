@@ -15,7 +15,7 @@ func GetPaymentEPUSDTName() string {
 	}
 	return "USDT"
 }
-func IsEnablePaymentEPUSDT() string {
+func IsEnablePaymentEPUSDT() bool {
 	return strings.EqualFold("true", os.Getenv("PAYMENT_EPUSDT_API_ENABLE"))
 }
 
@@ -41,7 +41,7 @@ func GetPaymentBTCPayName() string {
 	}
 	return "BTCPay"
 }
-func IsEnablePaymentBTCPay() string {
+func IsEnablePaymentBTCPay() bool {
 	return strings.EqualFold("true", os.Getenv("PAYMENT_BTCPAY_API_ENABLE"))
 }
 
@@ -67,7 +67,7 @@ func GetPaymentCryptAPIName() string {
 	}
 	return "CryptAPI"
 }
-func IsEnablePaymentCryptAPI() string {
+func IsEnablePaymentCryptAPI() bool {
 	return strings.EqualFold("true", os.Getenv("PAYMENT_CRYPTAPI_API_ENABLE"))
 }
 
@@ -81,7 +81,7 @@ func GetPaymentEasyPayName() string {
 	}
 	return "EasyPay"
 }
-func IsEnablePaymentEasyPay() string {
+func IsEnablePaymentEasyPay() bool {
 	return strings.EqualFold("true", os.Getenv("PAYMENT_EASYPAY_API_ENABLE"))
 }
 
