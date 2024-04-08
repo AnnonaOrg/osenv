@@ -63,6 +63,12 @@ func GetPaymentBTCPayStoreID() string {
 	return os.Getenv("PAYMENT_BTCPAY_API_STOREID")
 }
 
+// # BTCPay WebhookSecret
+// PAYMENT_BTCPAY_API_WEBHOOK_SECRET=
+func GetPaymentBTCPayWebhookSecret() string {
+	return os.Getenv("PAYMENT_BTCPAY_API_WEBHOOK_SECRET")
+}
+
 // #
 // #CryptAPI 标识
 // PAYMENT_CRYPTAPI_API_NAME=CryptAPI
