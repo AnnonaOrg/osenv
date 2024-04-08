@@ -2,6 +2,7 @@ package osenv
 
 import (
 	"os"
+	"strings"
 )
 
 // #支付方式
@@ -13,6 +14,9 @@ func GetPaymentEPUSDTName() string {
 		return retText
 	}
 	return "USDT"
+}
+func IsEnablePaymentEPUSDT() string {
+	return strings.EqualFold("true", os.Getenv("PAYMENT_EPUSDT_API_ENABLE"))
 }
 
 // #EPUSDT 接口地址
@@ -37,6 +41,9 @@ func GetPaymentBTCPayName() string {
 	}
 	return "BTCPay"
 }
+func IsEnablePaymentBTCPay() string {
+	return strings.EqualFold("true", os.Getenv("PAYMENT_BTCPAY_API_ENABLE"))
+}
 
 // #BTCPay 接口地址
 // PAYMENT_BTCPAY_API_URL=https://mainnet.demo.btcpayserver.org
@@ -60,6 +67,9 @@ func GetPaymentCryptAPIName() string {
 	}
 	return "CryptAPI"
 }
+func IsEnablePaymentCryptAPI() string {
+	return strings.EqualFold("true", os.Getenv("PAYMENT_CRYPTAPI_API_ENABLE"))
+}
 
 // #
 // #易支付 标识
@@ -70,6 +80,9 @@ func GetPaymentEasyPayName() string {
 		return retText
 	}
 	return "EasyPay"
+}
+func IsEnablePaymentEasyPay() string {
+	return strings.EqualFold("true", os.Getenv("PAYMENT_EASYPAY_API_ENABLE"))
 }
 
 // #易支付 接口地址
