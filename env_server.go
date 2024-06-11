@@ -6,8 +6,16 @@ import (
 
 // #GIN run mode runmode
 // SERVER_GIN_RUNMODE=release
-func GetServerGinRunode() string {
-	return os.Getenv("SERVER_GIN_RUNMODE")
+//
+//	func GetServerGinRunode() string {
+//		return GetServerGinRunmode()
+//	}
+func GetServerGinRunmode() string {
+	if ginRunmode := os.Getenv("SERVER_GIN_RUNMODE"); len(ginRunmode) > 0 {
+		return ginRunmode
+	} else {
+		return "release"
+	}
 }
 
 // server port :port :8080
