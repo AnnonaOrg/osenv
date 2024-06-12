@@ -33,6 +33,11 @@ func GetBotTelegramWebhookURL() string {
 	return os.Getenv("BOT_TELEGRAM_WEBHOOK_URL")
 }
 
+// bot apiproxy url
+func GetBotTelegramAPIProxyURL() string {
+	return os.Getenv("BOT_TELEGRAM_API_PROXY_URL")
+}
+
 // 告警通知群id: 接收反馈消息的Chat id
 func GetBotReportChatID() string {
 	return os.Getenv("BOT_REPORT_CHAT_ID")
