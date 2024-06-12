@@ -114,3 +114,9 @@ func GetPaymentEasyPayPid() string {
 func GetPaymentEasyPayKey() string {
 	return os.Getenv("PAYMENT_EASYPAY_API_KEY")
 }
+
+// #易支付 接口请求编码格式 JsonEncode URLValuesEncode
+// PAYMENT_EASYPAY_REQUEST_BODY_ENCODE
+func GetPaymentEasyRequstBodyEncode() string {
+	return os.Getenv("PAYMENT_EASYPAY_REQUEST_BODY_ENCODE")
+}
