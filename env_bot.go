@@ -32,6 +32,9 @@ func GetBotTelegramToken() string {
 func GetBotTelegramWebhookURL() string {
 	return os.Getenv("BOT_TELEGRAM_WEBHOOK_URL")
 }
+func GetBotAdminTelegramWebhookURL() string {
+	return os.Getenv("BOT_ADMIN_TELEGRAM_WEBHOOK_URL")
+}
 
 // bot apiproxy url
 func GetBotTelegramAPIProxyURL() string {
