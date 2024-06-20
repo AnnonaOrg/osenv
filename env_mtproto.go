@@ -19,7 +19,7 @@ func GetMtprotoProxyPort() string {
 func GetMtprotoProxyPortInt() int64 {
 	// return os.Getenv("MTPROTO_PROXY_PORT")
 	retText := os.Getenv("MTPROTO_PROXY_PORT")
-	retInt, err := strconv.ParseInt(retText, 10, 64)
+	retInt, err := strconv.ParseInt(retText, 10, 32)
 	if err != nil {
 		return 0
 	}
