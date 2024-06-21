@@ -28,13 +28,8 @@ func GetMtprotoProxyPortInt() int64 {
 func GetMtprotoProxySecret() string {
 	return os.Getenv("MTPROTO_PROXY_SECRET")
 }
-#Socks5
-SOCKS5_PROXY_ENABLE=false
-SOCKS5_PROXY_SERVER=
-SOCKS5_PROXY_PORT=
-SOCKS5_PROXY_USERNAME=
-SOCKS5_PROXY_PASSWORD=
-// #MtprotoProxy
+
+// #Socks5
 func IsEnableSocks5Proxy() bool {
 	return strings.EqualFold("true", os.Getenv("SOCKS5_PROXY_ENABLE"))
 }
