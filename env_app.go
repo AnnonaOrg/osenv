@@ -28,3 +28,7 @@ func GetAppTelegramUserPhoneNumber() string {
 func GetAppTelegramUserID() string {
 	return os.Getenv("APP_TELEGRAM_USER_ID")
 }
+
+func IsTDlibSimpleMessage() bool {
+	return strings.EqualFold("true", os.Getenv("TDLIB_SIMPLE_MESSAGE_ENABLE"))
+}
