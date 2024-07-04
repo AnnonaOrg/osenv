@@ -2,6 +2,7 @@ package osenv
 
 import (
 	"os"
+	"strings"
 )
 
 // Bot token
