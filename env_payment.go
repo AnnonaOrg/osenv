@@ -120,3 +120,9 @@ func GetPaymentEasyPayKey() string {
 func GetPaymentEasyRequstBodyEncode() string {
 	return os.Getenv("PAYMENT_EASYPAY_REQUEST_BODY_ENCODE")
 }
+
+// #易支付 设备类型
+// PAYMENT_EASYPAY_API_DEVICE=
+func GetPaymentEasyPayDevice() string {
+	return os.Getenv("PAYMENT_EASYPAY_API_DEVICE")
+}

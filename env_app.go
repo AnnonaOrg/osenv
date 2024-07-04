@@ -20,15 +20,15 @@ func GetAppTelegramApiHash() string {
 	return os.Getenv("APP_TELEGRAM_API_HASH")
 }
 
-// app user phone number
-func GetAppTelegramUserPhoneNumber() string {
-	return os.Getenv("APP_TELEGRAM_USER_PHONE_NUMBER")
-}
+// // app user phone number
+// func GetAppTelegramUserPhoneNumber() string {
+// 	return os.Getenv("APP_TELEGRAM_USER_PHONE_NUMBER")
+// }
 
-// app user id
-func GetAppTelegramUserID() string {
-	return os.Getenv("APP_TELEGRAM_USER_ID")
-}
+// // app user id
+// func GetAppTelegramUserID() string {
+// 	return os.Getenv("APP_TELEGRAM_USER_ID")
+// }
 
 func IsTDlibSimpleMessage() bool {
 	return strings.EqualFold("true", os.Getenv("TDLIB_SIMPLE_MESSAGE_ENABLE"))
