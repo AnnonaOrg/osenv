@@ -126,3 +126,25 @@ func GetPaymentEasyRequstBodyEncode() string {
 func GetPaymentEasyPayDevice() string {
 	return os.Getenv("PAYMENT_EASYPAY_API_DEVICE")
 }
+
+// #Boxcoin 标识
+func GetPaymentBoxcoinName() string {
+	retText := os.Getenv("PAYMENT_BOXCOIN_API_NAME")
+	if len(retText) > 0 {
+		return retText
+	}
+	return "Boxcoin"
+}
+func IsEnablePaymentBoxcoin() bool {
+	return strings.EqualFold("true", os.Getenv("PAYMENT_BOXCOIN_API_ENABLE"))
+}
+
+// #Boxcoin 接口地址 YOUR-DOMAIN/boxcoin/api.php
+func GetPaymentBoxcoinUrl() string {
+	return os.Getenv("PAYMENT_BOXCOIN_API_URL")
+}
+
+// #Boxcoin 验证密钥
+func GetPaymentBoxcoinKey() string {
+	return os.Getenv("PAYMENT_BOXCOIN_API_KEY")
+}
