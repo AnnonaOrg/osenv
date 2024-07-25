@@ -144,7 +144,12 @@ func GetPaymentBoxcoinUrl() string {
 	return os.Getenv("PAYMENT_BOXCOIN_API_URL")
 }
 
-// #Boxcoin 验证密钥
+// #Boxcoin api 验证密钥
 func GetPaymentBoxcoinKey() string {
 	return os.Getenv("PAYMENT_BOXCOIN_API_KEY")
+}
+
+// #Boxcoin webhook 验证密钥
+func GetPaymentBoxcoinWebhookKey() string {
+	return os.Getenv("PAYMENT_BOXCOIN_WEBHOOK_KEY")
 }
