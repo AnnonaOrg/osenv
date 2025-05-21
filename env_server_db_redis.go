@@ -38,19 +38,30 @@ func GetServerDbRedisDB() int {
 // server db redis address
 // SERVER_DB_REDIS_ADDRESS 127.0.0.1:6379
 func GetServerDbRedisSlaveAddress() string {
-	return os.Getenv("SERVER_DB_REDIS_SLAVE_ADDRESS")
+	item := os.Getenv("SERVER_DB_REDIS_SLAVE_ADDRESS")
+	if len(item) > 0 {
+		return item
+	}
+	return os.Getenv("SERVER_DB_REDIS_ADDRESS")
 }
 
 // server db redis password
 // SERVER_DB_REDIS_PASSWORD Redis密码
 func GetServerDbRedisSlavePassword() string {
-	return os.Getenv("SERVER_DB_REDIS_SLAVE_PASSWORD")
+	item := os.Getenv("SERVER_DB_REDIS_SLAVE_PASSWORD")
+	if len(item) > 0 {
+		return item
+	}
+	return os.Getenv("SERVER_DB_REDIS_PASSWORD")
 }
 
 // server db redis Redis库
 // SERVER_DB_REDIS_DB 0 1 2 3
 func GetServerDbRedisSlaveDB() int {
 	v := os.Getenv("SERVER_DB_REDIS_SLAVE_DB")
+	if len(v) == 0 {
+		v = os.Getenv("SERVER_DB_REDIS_DB")
+	}
 	if v == "" {
 		return 0
 	}
