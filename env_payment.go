@@ -153,3 +153,27 @@ func GetPaymentBoxcoinKey() string {
 func GetPaymentBoxcoinWebhookKey() string {
 	return os.Getenv("PAYMENT_BOXCOIN_WEBHOOK_KEY")
 }
+
+func GetPaymentUmiPayName() string {
+	retText := os.Getenv("PAYMENT_UMIPAY_API_NAME")
+	if len(retText) > 0 {
+		return retText
+	}
+	return "UmiPay"
+}
+func IsEnablePaymentUmiPay() bool {
+	return strings.EqualFold("true", os.Getenv("PAYMENT_UMIPAY_API_ENABLE"))
+}
+func GetPaymentUmiPayUrl() string {
+	return os.Getenv("PAYMENT_UMIPAY_API_URL")
+}
+
+// 商户id
+func GetPaymentUmiPayPid() string {
+	return os.Getenv("PAYMENT_UMIPAY_API_PID")
+}
+
+// 验证密钥
+func GetPaymentUmiPayKey() string {
+	return os.Getenv("PAYMENT_UMIPAY_API_KEY")
+}
